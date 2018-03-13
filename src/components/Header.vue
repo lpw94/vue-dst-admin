@@ -1,7 +1,8 @@
 <template>
   <navbar>
     <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button" @click="mobileSidebarToggle">&#9776;</button>
-    <a class="navbar-brand" ></a>
+    <!-- <a class="navbar-brand" ></a> -->
+    <div class="head-logo"></div>
     <ul class="nav navbar-nav d-md-down-none">
       <li class="nav-item">
         <a style="color: #666" class="nav-link navbar-toggler sidebar-toggler"  @click="sidebarMinimize">&#9776;</a>
@@ -14,22 +15,32 @@
        <li class="nav-item header-item">
           <router-link tag="div" to='/' class="nav-link">
             <!-- <p><Icon type="compose" size='30' color="#2d8cf0"></Icon></p> -->
-            <p  style="color:#666"> 首页 </p>
+            <p style="color:#666"> 首页 </p>
         </router-link> 
       </li>
         <li class="nav-item header-item">
         <router-link tag="div" to='/userManage' class="nav-link">
             <!-- <p><Icon type="stats-bars" size='30' color="#2d8cf0"></Icon></p> -->
-            <p  style="color:#666"> 用户管理 </p>
+            <p style="color:#666"> 用户管理 </p>
+        </router-link> 
+      </li>
+
+      <li class="nav-item header-item">
+        <router-link tag="div" to='/systemSetup' class="nav-link">
+            <!-- <p><Icon type="stats-bars" size='30' color="#2d8cf0"></Icon></p> -->
+            <p style="color:#666"> 系统设置 </p>
         </router-link> 
       </li>
 
         <li class="nav-item header-item">
          <router-link tag="div" to='/dataCenter' class="nav-link">
             <!-- <p><Icon type="trophy" size='30' color="#2d8cf0"></Icon></p> -->
-            <p  style="color:#666"> 经营监控 </p>
+            <p style="color:#666"> 经营监控 </p>
         </router-link> 
       </li>
+
+
+     
 
 
       <!--    <li class="nav-item header-item">
@@ -64,7 +75,7 @@
       </li>
 
 
-     <!--  <Dropdown class="nav-item">
+      <Dropdown class="nav-item">
         <a href="javascript:void(0)">
            <span slot="button">
           <img src="static/img/avatars/6.jpg" class="img-avatar" alt="o">
@@ -72,7 +83,7 @@
           </span>
         </a>
         <Dropdown-menu slot="list">
-            <Dropdown-item>
+            <!-- <Dropdown-item>
               <p class="dropdown-itemp"><Icon type="alert"></Icon>Updates<span class="badge badge-info">42</span></p>
 
             
@@ -88,7 +99,7 @@
               <Dropdown-item divided>
               <p class="dropdown-itemp"><Icon type="android-contact"></Icon> Profile</p>
 
-              </Dropdown-item>
+              </Dropdown-item> -->
             <Dropdown-item >
               <p class="dropdown-itemp"><Icon type="android-settings"></Icon> 设置</p>
               </Dropdown-item>
@@ -96,16 +107,16 @@
                  <Dropdown-item > <a href="" @click="Logout"  ><p  class="dropdown-itemp"><Icon type="power"></Icon>退出登录</p></a></Dropdown-item>
 
         </Dropdown-menu>
-    </Dropdown> -->
+    </Dropdown>
 
-    <el-dropdown menu-align='start'>
+    <!-- <el-dropdown menu-align='start'>
       <img src="static/img/avatars/6.jpg" class="img-avatar" alt="o">
         admin
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item>首页</el-dropdown-item>
         <el-dropdown-item ><a href="" @click="Logout"  ><p  class="dropdown-itemp">退出登录</p></a></el-dropdown-item>
       </el-dropdown-menu>
-    </el-dropdown>
+    </el-dropdown> -->
 
    
 
@@ -180,5 +191,22 @@ export default {
   .header-item a{
     color:white !important;
   }
+  .head-logo{
+
+  }
+  .head-logo {
+    display: inline-block;
+    width: 155px;
+    height: 55px;
+    padding: .5rem 1rem;
+    margin-right: 0;
+    background-image: url(../../static/img/head-logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 150px auto;
+    border-bottom: 1px solid #cfd8dc;
+}
+
+
 
 </style>

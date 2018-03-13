@@ -6,12 +6,10 @@
     <mQuery></mQuery>
 
 
-
-
     <div class="table-top-button">
-      <el-button type="primary" size="medium" class="buttonminw98">创建</el-button>
-      <el-button size="medium"  class="buttonminw98">批量导入</el-button>
-      <el-button size="medium"  class="buttonminw98">批量导出</el-button>
+      <Button type="primary">创建</Button>
+      <Button>批量导入</Button>
+      <Button>批量导出</Button>
     </div>
 
     

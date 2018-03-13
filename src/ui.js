@@ -3,17 +3,16 @@ import NProgress from 'nprogress'; // Progress 进度条
 import 'nprogress/nprogress.css';// Progress 进度条 样式
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
-import 'element-ui/lib/theme-chalk/index.css'
+// import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(iView);
 
 import  TreeView   from "vue-json-tree-view";
 Vue.use(TreeView);
 
-import ElementUI from 'element-ui'
+//注释Element UI 
 
-
-
-Vue.use(ElementUI)
+// import ElementUI from 'element-ui'
+// Vue.use(ElementUI)
 
 import ECharts from 'vue-echarts/components/ECharts.vue'
 Vue.component('chart', ECharts)

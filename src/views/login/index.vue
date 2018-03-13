@@ -2,6 +2,8 @@
     <div class="login-container" style="background-color: #141a48;margin: 0px;overflow: hidden;">
     <!-- <div id="canvascontainer" ref='can'></div> -->
 
+    <h1>登录规则：</h1>
+
     <Form ref="loginForm" autoComplete="on" :model="loginForm" :rules="loginRules"  class="card-box login-form">
         <Form-item prop="email">
             <Input type="text" v-model="loginForm.email" placeholder="Username" autoComplete="on">
@@ -16,8 +18,8 @@
         <Form-item>
             <Button type="primary" @click="handleLogin('loginForm')" long>登录</Button>
         </Form-item>
-        <div class='tips'>admin账号为:admin@wz.com 密码123456</div>
-            <div class='tips'>editor账号:editor@wz.com 密码123456</div>
+        <div class='tips'>admin账号为:admin 密码123456</div>
+            <div class='tips'>editor账号:editor 密码123456</div>
            </Form>
 
     </div>
@@ -29,9 +31,10 @@
     export default {
       name: 'login',
       data() {
+        //登录规则
         const validateEmail = (rule, value, callback) => {
-          if (!isWscnEmail(value)) {
-            callback(new Error('请输入正确的合法邮箱'));
+          if (value.length < 2) {
+            callback(new Error('请输入用户名'));
           } else {
             callback();
           }
@@ -45,7 +48,7 @@
         };
         return {
           loginForm: {
-            email: 'admin@wz.com',
+            email: 'admin',
             password: ''
           },
           loginRules: {

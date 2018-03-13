@@ -1,5 +1,5 @@
 <template>
-<el-form class="" label-position="right" label-width="100px" :model="formInline" ref="formInline" >
+<!-- <el-form class="" label-position="right" label-width="100px" :model="formInline" ref="formInline" >
       <div class="el-row">
         <div class="el-col el-col-22">
           <div class="el-row form-select">
@@ -115,7 +115,12 @@
           </div>
         </div>
       </div>
-    </el-form>
+    </el-form> -->
+
+
+    <div>
+      <p>条件选择</p>
+    </div>
 
 </template>
 <script>

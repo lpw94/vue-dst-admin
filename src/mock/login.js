@@ -21,6 +21,13 @@ const userMap = {
     introduction: '我是开发',
     name: '工程师小王',
     uid: '003'
+  },
+  guest: {
+    role: ['guest'],
+    token: 'guest',
+    introduction: '我是开发',
+    name: '工程师小王',
+    uid: '003'
   }
 }
 

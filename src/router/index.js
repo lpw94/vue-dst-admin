@@ -6,9 +6,6 @@ import Full2 from '@/containers/Full2'
 
 import Buttons from '@/views/components/Buttons'
 
-import Demo from '@/views/Demo'
-import Demo2 from '@/views/Demo2'
-
 
 // Views - Pages
 import Page404 from '@/views/errorPages/Page404'
@@ -63,9 +60,25 @@ export const asyncRouterMap = [
     //meta: { role: ['admin'] },
     hidden:false,
     children: [
-     {path: '/userManage/Demo',name: '测试',icon:'thumbsup',component: _import('Demo')},
      {path: '/userManage/memberList',name: '会员列表',icon:'thumbsup',component: _import('userManage/memberList')},
-    
+     {path: '/userManage/Demo',name: '表格实例',icon:'thumbsup',component: _import('Demo')},
+    ]
+  },
+  {
+    path: '/systemSetup',
+    redirect: '/systemSetup/Demo2',
+    name: '系统设置',
+    component: Full,
+    //meta: { role: ['admin'] },
+    hidden:false,
+    children: [
+     {path: '/systemSetup/Demo2',name: '组织架构',icon:'thumbsup',component: _import('systemSetup/Demo2')},
+     {path: '/carChart',name: '角色管理',icon:'pie-graph',
+        component: {render (c) { return c('router-view') }},
+        children: [ {path: 'carChart',name: '车辆热力轨迹图',icon:'stats-bars',component: _import('yunyingjiankong/carChart'), hidden:false, },
+                    {path: 'zhonghe',name: '车辆综合数据监控',icon:'arrow-graph-up-right',component: _import('yunyingjiankong/che_zonghe')},
+                  ]
+      },
     ]
   },
   {

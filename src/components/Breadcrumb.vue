@@ -1,22 +1,12 @@
 <template>
- <!--  <ol class="breadcrumb">
+  <ol class="breadcrumb">
     <li class="breadcrumb-item" v-for="(item, index) in list">
       <span class="active" v-if="isLast(index)">{{ showName(item) }}</span>
       <router-link :to="item.path" v-else-if="item.path!==''">{{ showName(item) }}</router-link>
 
       <a href="#/" v-else-if="item.path===''">{{ showName(item) }}</a>
     </li>
-  </ol> -->
-
-  <el-breadcrumb separator="/" class="breadcrumb">
-    <el-breadcrumb-item class="breadcrumb-item" v-for="(item, index) in list">
-      <span class="active" v-if="isLast(index)">{{ showName(item) }}</span>
-      <span v-else-if="item.path!==''">{{ showName(item) }}</span>
-
-      <span v-else-if="item.path===''">{{ showName(item) }}</span>
-    </el-breadcrumb-item>
-  </el-breadcrumb>
-
+  </ol>
 
 </template>
 
@@ -49,10 +39,4 @@ export default {
 }
 </script>
 <style>
-  .breadcrumb{
-    padding-left: 20px;
-    background-color: #fff;
-    height: 40px;
-    line-height: 40px;
-  }
 </style>
